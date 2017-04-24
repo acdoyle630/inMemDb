@@ -27,28 +27,47 @@ function byId(id) {
 
 function youngest() {
   let ageArray = Object.values(users);
-  let youngest = ageArray[0].age;
+  let young = ageArray[0].age;
   for( var i = 0; i < ageArray.length; i++){
-    if(ageArray[i].age < youngest){
-      youngest = ageArray[i].age;
+    if(ageArray[i].age < young){
+      young = ageArray[i].age;
     }
   }
-  return youngest;
+  return young;
 }
-
-youngest();
 
 
 function oldest() {
-
+  let ageArray = Object.values(users);
+  let old = ageArray[0].age;
+  for( var i = 0; i < ageArray.length; i++){
+    if(ageArray[i].age > old){
+      old = ageArray[i].age;
+    }
+  }
+  return old;
 }
 
 function males () {
-
+  let genderArray = Object.values(users);
+  let males = [];
+  for( var i = 0; i < genderArray.length; i++){
+    if( genderArray[i].gender === 'm'){
+      males.push(genderArray[i]);
+    }
+  }
+  return males;
 }
 
 function females() {
-
+  let genderArray = Object.values(users);
+  let females = [];
+  for( var i = 0; i < genderArray.length; i++){
+    if( genderArray[i].gender === 'f'){
+      females.push(genderArray[i]);
+    }
+  }
+  return females;
 }
 
 function employees(employer) {
