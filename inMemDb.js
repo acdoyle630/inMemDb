@@ -22,6 +22,9 @@ const employer = {
 };
 
 function byId(id) {
+  if(typeof id !== 'number'){
+    throw new Error('wrong data type');
+  }
   return users[id];
 }
 

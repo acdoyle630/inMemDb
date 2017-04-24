@@ -17,6 +17,9 @@ describe('byId',() =>{
     expect(functions.byId(2)).to.be.deep.equal({ name: 'Bob', age: 21, gender: 'm', jobType: 'dv' });
     expect(functions.byId(6)).to.be.deep.equal({ name: 'Fred', age: 45, gender: 'm', jobType: 'dv' });
   });
+  it('should throw an error if parameter is not typeof number', () =>{
+    expect(functions.byId.bind(null,'two')).to.throw(Error);
+  });
 });
 describe('youngest', () =>{
   it('should return the youngest users age', () => {
