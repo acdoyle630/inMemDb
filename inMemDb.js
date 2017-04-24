@@ -79,15 +79,9 @@ function employees(employer) {
   let currentEmployee = users[employer];
   let currentJob = currentEmployee.jobType;
   currentEmployee.jobType = jobs[currentJob];
-  console.log(currentEmployee);
-
-
+  return currentEmployee;
 }
 
-
-
-
-employees(2);
 
 const functions = {
   byId: byId,
