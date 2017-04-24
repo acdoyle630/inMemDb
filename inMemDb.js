@@ -1,3 +1,5 @@
+/*jshint esversion:6 */
+
 const users = {
   '1': { name: 'Alice', age: 12, gender: 'f', jobType: 'st' },
   '2': { name: 'Bob', age: 21, gender: 'm', jobType: 'dv' },
@@ -20,12 +22,22 @@ const employer = {
 };
 
 function byId(id) {
-
+  return users[id];
 }
 
 function youngest() {
-
+  let ageArray = Object.values(users);
+  let youngest = ageArray[0].age;
+  for( var i = 0; i < ageArray.length; i++){
+    if(ageArray[i].age < youngest){
+      youngest = ageArray[i].age;
+    }
+  }
+  return youngest;
 }
+
+youngest();
+
 
 function oldest() {
 
